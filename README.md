@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/36030566/118812185-2638a980-b8ae-11eb-906d-b208c1976178.png)
+
 # chartjs-demo
 
 ## Project setup
