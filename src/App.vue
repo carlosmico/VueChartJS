@@ -6,7 +6,7 @@
       <div class="chart">
         <h2>Line Chart</h2>
 
-        <LineChart />
+        <LineChart :chart-data="dataCollection" />
       </div>
 
       <div class="chart">
@@ -67,6 +67,45 @@ export default {
     DoughnutChart,
     PieChart,
     LineChart,
+  },
+  mounted() {
+    setTimeout(() => {
+      console.log("Update");
+      this.dataCollection = {
+        labels: ["Label 1", "Label 2"],
+        datasets: [
+          {
+            label: "Data 1",
+            backgroundColor: "green",
+            data: [50, 10, 5],
+          },
+          {
+            label: "Data 2",
+            backgroundColor: "tomato",
+            data: [10, 50, 60],
+          },
+        ],
+      };
+    }, 1200);
+  },
+  data() {
+    return {
+      dataCollection: {
+        labels: ["Label 1", "Label 2"],
+        datasets: [
+          {
+            label: "Data 1",
+            backgroundColor: "green",
+            data: [10, 30, 20],
+          },
+          {
+            label: "Data 2",
+            backgroundColor: "tomato",
+            data: [30, 20, 10],
+          },
+        ],
+      },
+    };
   },
 };
 </script>
